@@ -1,4 +1,4 @@
-package com.victor.vojbackenduserservice;
+package com.victor.vojbackendquestionservice;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -8,14 +8,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@MapperScan("com.victor.vojbackenduserservice.mapper")
+@MapperScan("com.victor.vojbackendquestionservice.mapper")
 @EnableScheduling
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @ComponentScan("com.victor")
-public class VojBackendUserServiceApplication {
+public class VojBackendUserQuestionServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(VojBackendUserServiceApplication.class, args);
+        SpringApplication.run(VojBackendUserQuestionServiceApplication.class, args);
     }
 
 }
