@@ -17,7 +17,8 @@ import javax.annotation.Resource;
  *Date：2024/5/28  15:03
  *Filename：UserInnerController
  */
-@RestController("/inner")
+@RestController()
+@RequestMapping("/inner")
 public class JudgeInnerController implements JudgeFeignClient {
 
     @Resource

@@ -5,20 +5,20 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
-        - id: yuoj-backend-user-service
-          uri: lb://yuoj-backend-user-service
+        - id: voj-backend-user-service
+          uri: lb://voj-backend-user-service
           predicates:
             - Path=/api/user/**
-        - id: yuoj-backend-question-service
-          uri: lb://yuoj-backend-question-service
+        - id: voj-backend-question-service
+          uri: lb://voj-backend-question-service
           predicates:
             - Path=/api/question/**
-        - id: yuoj-backend-judge-service
-          uri: lb://yuoj-backend-judge-service
+        - id: voj-backend-judge-service
+          uri: lb://voj-backend-judge-service
           predicates:
             - Path=/api/judge/**
   application:
-    name: yuoj-backend-gateway
+    name: voj-backend-gateway
   main:
     web-application-type: reactive
 server:

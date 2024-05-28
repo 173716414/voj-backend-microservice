@@ -4,6 +4,7 @@ import com.victor.vojbackendmodel.model.entity.User;
 import com.victor.vojbackendserviceclient.service.UserFeignClient;
 import com.victor.vojbackenduserservice.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,8 @@ import java.util.List;
  *Date：2024/5/28  15:03
  *Filename：UserInnerController
  */
-@RestController("/inner")
+@RestController()
+@RequestMapping("/inner")
 public class UserInnerController implements UserFeignClient {
 
     @Resource
