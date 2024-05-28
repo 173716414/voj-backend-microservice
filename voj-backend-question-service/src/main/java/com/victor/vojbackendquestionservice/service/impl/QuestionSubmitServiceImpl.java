@@ -19,8 +19,8 @@ import com.victor.vojbackendmodel.model.vo.QuestionSubmitVO;
 import com.victor.vojbackendquestionservice.mapper.QuestionSubmitMapper;
 import com.victor.vojbackendquestionservice.service.QuestionService;
 import com.victor.vojbackendquestionservice.service.QuestionSubmitService;
-import com.victor.vojbackendserviceclient.service.JudgeService;
-import com.victor.vojbackendserviceclient.service.UserService;
+import com.victor.vojbackendserviceclient.service.JudgeFeignClient;
+import com.victor.vojbackendserviceclient.service.UserFeignClient;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -45,11 +45,11 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
     private QuestionService questionService;
 
     @Resource
-    private UserService userService;
+    private UserFeignClient userService;
 
     @Resource
     @Lazy
-    private JudgeService judgeService;
+    private JudgeFeignClient judgeService;
     /**
      * 提交题目
      *

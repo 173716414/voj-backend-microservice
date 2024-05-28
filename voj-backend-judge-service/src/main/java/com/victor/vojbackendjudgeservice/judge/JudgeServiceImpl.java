@@ -14,8 +14,8 @@ import com.victor.vojbackendmodel.model.dto.question.JudgeCase;
 import com.victor.vojbackendmodel.model.entity.Question;
 import com.victor.vojbackendmodel.model.entity.QuestionSubmit;
 import com.victor.vojbackendmodel.model.enums.QuestionSubmitStatusEnum;
-import com.victor.vojbackendserviceclient.service.QuestionService;
-import com.victor.vojbackendserviceclient.service.QuestionSubmitService;
+import com.victor.vojbackendserviceclient.service.QuestionFeignClient;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 public class JudgeServiceImpl implements JudgeService {
 
     @Resource
-    private QuestionService questionService;
+    private QuestionFeignClient questionService;
 
     @Resource
     private QuestionSubmitService questionSubmitService;

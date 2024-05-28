@@ -15,7 +15,7 @@ import com.victor.vojbackendmodel.model.vo.QuestionVO;
 import com.victor.vojbackendmodel.model.vo.UserVO;
 import com.victor.vojbackendquestionservice.mapper.QuestionMapper;
 import com.victor.vojbackendquestionservice.service.QuestionService;
-import com.victor.vojbackendserviceclient.service.UserService;
+import com.victor.vojbackendserviceclient.service.UserFeignClient;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -39,7 +39,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
 
 
     @Resource
-    private UserService userService;
+    private UserFeignClient userService;
 
     /**
      * 校验题目是否合法

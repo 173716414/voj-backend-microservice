@@ -15,7 +15,7 @@ import com.victor.vojbackendmodel.model.entity.Question;
 import com.victor.vojbackendmodel.model.entity.User;
 import com.victor.vojbackendmodel.model.vo.QuestionVO;
 import com.victor.vojbackendquestionservice.service.QuestionService;
-import com.victor.vojbackendserviceclient.service.UserService;
+import com.victor.vojbackendserviceclient.service.UserFeignClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +29,7 @@ import java.util.List;
  *
 */
 @RestController
-@RequestMapping("/question")
+@RequestMapping("/")
 @Slf4j
 public class QuestionController {
 
@@ -37,7 +37,7 @@ public class QuestionController {
     private QuestionService questionService;
 
     @Resource
-    private UserService userService;
+    private UserFeignClient userService;
 
     private final static Gson GSON = new Gson();
 
